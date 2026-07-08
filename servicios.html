@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios — EcomGrowthIA | Marketing, Automatización con IA y Páginas Web</title>
+  <meta name="description" content="Servicios diseñados para generar clientes, ventas y control. Marketing digital, sistemas de automatización con IA y creación de páginas web profesionales.">
+  <link rel="icon" href="wp-content/uploads/2026/05/cropped-logo_sin_fondo_recortado-32x32.png" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="../fonts.googleapis.com/css2/family%3DManrope_wght%40600%3B700%26family%3DSpace%2BGrotesk_wght%40500%3B600%3B700%26family%3DInter_wght%40400%3B500%3B600%26display%3Dswap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <style>
+    .service-block {
+      padding: 80px 0;
+      border-bottom: 1px solid rgba(56,189,248,0.08);
+      position: relative;
+    }
+    .service-block:last-of-type { border-bottom: none; }
+    .service-block__layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .service-block__layout.reverse { direction: rtl; }
+    .service-block__layout.reverse > * { direction: ltr; }
+    .service-block__tag {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(56,189,248,0.1);
+      border: 1px solid rgba(56,189,248,0.25);
+      border-radius: 100px;
+      color: var(--c-accent);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+    .service-block__name {
+      font-family: var(--f-head);
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 600;
+      color: var(--c-text);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    .service-block__desc {
+      font-size: 16px;
+      color: var(--c-text-muted);
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+    .service-block__price-block {
+      background: rgba(7,26,51,0.7);
+      border: 1px solid rgba(56,189,248,0.3);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 28px;
+    }
+    .service-block__price {
+      font-family: var(--f-head);
+      font-size: 36px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--c-accent) 0%, var(--c-btn) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .service-block__price-sub {
+      font-size: 14px;
+      color: var(--c-text-muted);
+      margin-bottom: 16px;
+    }
+    .service-block__price-note {
+      font-size: 13px;
+      color: var(--c-text-dim);
+      border-top: 1px solid rgba(56,189,248,0.1);
+      padding-top: 12px;
+      line-height: 1.5;
+    }
+    .benefit-visual {
+      background: linear-gradient(135deg, rgba(11,95,255,0.08), rgba(7,26,51,0.6));
+      border: 1px solid rgba(56,189,248,0.15);
+      border-radius: 20px;
+      padding: 36px 32px;
+    }
+    .benefit-visual__title {
+      font-family: var(--f-head);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--c-accent);
+      margin-bottom: 24px;
+    }
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(56,189,248,0.07);
+      font-size: 15px;
+      color: rgba(246,248,252,0.9);
+    }
+    .benefit-item:last-child { border-bottom: none; }
+    .benefit-check {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(56,189,248,0.2), rgba(11,95,255,0.15));
+      border: 1px solid rgba(56,189,248,0.3);
+      color: var(--c-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    @media (max-width: 900px) {
+      .service-block__layout { grid-template-columns: 1fr; gap: 40px; }
+      .service-block__layout.reverse { direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="EcomGrowthIA — Inicio">
+        <img src="wp-content/uploads/2026/05/cropped-logo_sin_fondo_recortado-192x192.png" alt="Logo EcomGrowthIA" width="36" height="36">
+        EcomGrowthIA
+        <span class="navbar__logo-dot" aria-hidden="true"></span>
+      </a>
+      <div class="navbar__nav" role="menubar">
+        <a href="index.html" class="navbar__link" role="menuitem">Inicio</a>
+        <a href="servicios.html" class="navbar__link" role="menuitem">Servicios</a>
+        <a href="sobre-nosotros.html" class="navbar__link" role="menuitem">Sobre nosotros</a>
+        <a href="contacto.html" class="navbar__link" role="menuitem">Contacto</a>
+        <a href="contacto.html" class="navbar__cta">Hablar con nosotros</a>
+      </div>
+      <button class="navbar__hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="navbar__mobile" role="menu">
+    <a href="index.html" class="navbar__link">Inicio</a>
+    <a href="servicios.html" class="navbar__link">Servicios</a>
+    <a href="sobre-nosotros.html" class="navbar__link">Sobre nosotros</a>
+    <a href="contacto.html" class="navbar__link">Contacto</a>
+    <a href="contacto.html" class="navbar__cta">Hablar con nosotros</a>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="eyebrow anim anim-1">Servicios EcomGrowthIA</div>
+          <h1 class="h1 anim anim-2" id="hero-title">
+            Servicios diseñados para generar<br><em>clientes, ventas y control.</em>
+          </h1>
+          <p class="hero__sub anim anim-3">
+            No hacemos marketing por hacer. Creamos sistemas simples para que tu negocio crezca con más previsibilidad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICIO 1: MARKETING DIGITAL ===== -->
+    <section class="section" id="marketing" aria-labelledby="marketing-title">
+      <div class="container">
+        <div class="service-block">
+          <div class="service-block__layout">
+            <div class="reveal">
+              <span class="service-block__tag">Servicio 01</span>
+              <h2 class="service-block__name" id="marketing-title">Marketing digital</h2>
+              <p class="service-block__desc">
+                Creamos estrategias de captación para que tu negocio consiga más oportunidades cualificadas y convierta mejor su inversión en ventas reales.
+              </p>
+              <ul class="feature-list mb-40">
+                <li><span class="check" aria-hidden="true">✓</span>Más visibilidad ante tu cliente ideal</li>
+                <li><span class="check" aria-hidden="true">✓</span>Más oportunidades de venta cualificadas</li>
+                <li><span class="check" aria-hidden="true">✓</span>Campañas enfocadas en resultados medibles</li>
+                <li><span class="check" aria-hidden="true">✓</span>Captación clara, medible y optimizable</li>
+                <li><span class="check" aria-hidden="true">✓</span>Menos dependencia de publicar contenido a diario</li>
+              </ul>
+              <a href="contacto.html" class="btn btn--primary">
+                Contactar
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+            <div class="benefit-visual reveal">
+              <p class="benefit-visual__title">Lo que consigues</p>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Más leads cualificados cada mes</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Inversión publicitaria optimizada</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Estrategia clara y sin suposiciones</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Crecimiento constante y medible</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Menos dependencia del contenido orgánico</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ===== SERVICIO 2: AUTOMATIZACIÓN CON IA ===== -->
+    <section class="section section--alt" id="automatizacion" aria-labelledby="ai-title">
+      <div class="container">
+        <div class="service-block">
+          <div class="service-block__layout">
+            <div class="reveal">
+              <span class="service-block__tag" style="background:rgba(11,95,255,0.15); border-color:rgba(11,95,255,0.4); color:#7BA4FF;">Servicio 02 — Más vendido</span>
+              <h2 class="service-block__name" id="ai-title">Sistemas de automatización con Inteligencia Artificial</h2>
+              <p class="service-block__desc">
+                Implementamos un sistema que automatiza el seguimiento, organiza oportunidades y ayuda a convertir más ventas sin depender de procesos manuales.
+              </p>
+              <ul class="feature-list mb-40">
+                <li><span class="check" aria-hidden="true">✓</span>Seguimiento automático de leads sin esfuerzo manual</li>
+                <li><span class="check" aria-hidden="true">✓</span>Menos oportunidades perdidas por falta de contacto</li>
+                <li><span class="check" aria-hidden="true">✓</span>Respuestas más rápidas al prospecto en el momento clave</li>
+                <li><span class="check" aria-hidden="true">✓</span>Control total del proceso comercial</li>
+                <li><span class="check" aria-hidden="true">✓</span>Más ventas con menos caos interno</li>
+                <li><span class="check" aria-hidden="true">✓</span>Sistema escalable sin depender de más personal</li>
+              </ul>
+              <a href="contacto.html" class="btn btn--primary">
+                Contactar
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+            <div class="benefit-visual reveal" style="background:linear-gradient(135deg,rgba(11,95,255,0.12),rgba(7,26,51,0.7)); border-color:rgba(56,189,248,0.25);">
+              <p class="benefit-visual__title">Resultado esperado</p>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>0 leads sin seguimiento</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Proceso comercial predecible</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Ahorro de horas semanales de trabajo manual</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Mayor tasa de conversión de oportunidades</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Sistema que trabaja cuando tú no puedes</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Crecimiento sin necesidad de más equipo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ===== SERVICIO 3: PÁGINAS WEB ===== -->
+    <section class="section" id="webs" aria-labelledby="web-title">
+      <div class="container">
+        <div class="service-block">
+          <div class="service-block__layout">
+            <div class="reveal">
+              <span class="service-block__tag">Servicio 03</span>
+              <h2 class="service-block__name" id="web-title">Creación de páginas webs profesionales</h2>
+              <p class="service-block__desc">
+                Diseñamos páginas web claras, rápidas y orientadas a conversión para que tu negocio comunique mejor, genere confianza y convierta más visitas en clientes.
+              </p>
+              <ul class="feature-list mb-40">
+                <li><span class="check" aria-hidden="true">✓</span>Diseño profesional y coherente con tu marca</li>
+                <li><span class="check" aria-hidden="true">✓</span>Estructura enfocada en conversión, no solo en estética</li>
+                <li><span class="check" aria-hidden="true">✓</span>Copy claro que comunica valor real</li>
+                <li><span class="check" aria-hidden="true">✓</span>Completamente responsive y optimizada para móvil</li>
+                <li><span class="check" aria-hidden="true">✓</span>Velocidad y rendimiento para no perder visitas</li>
+                <li><span class="check" aria-hidden="true">✓</span>Alineada con tus objetivos comerciales reales</li>
+              </ul>
+              <a href="contacto.html" class="btn btn--primary">
+                Contactar
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+            <div class="benefit-visual reveal">
+              <p class="benefit-visual__title">Lo que consigues</p>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Primera impresión que genera confianza</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Más visitas convertidas en contactos</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Página que trabaja 24h como tu mejor comercial</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Diseño orientado a tu cliente ideal</div>
+              <div class="benefit-item"><span class="benefit-check" aria-hidden="true">✓</span>Base sólida para escalar tu marketing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="section cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-section__inner">
+          <div class="eyebrow reveal">Sin sistema, se pierden oportunidades</div>
+          <h2 class="h2 reveal" id="cta-title">Deja de perder oportunidades por falta de sistema.</h2>
+          <p class="cta-section__sub reveal">
+            Cuéntanos tu situación y te mostraremos exactamente cómo podemos ayudarte.
+          </p>
+          <a href="contacto.html" class="btn btn--primary btn--lg reveal">
+            Contactar
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="navbar__logo">
+            <img src="wp-content/uploads/2026/05/cropped-logo_sin_fondo_recortado-192x192.png" alt="Logo EcomGrowthIA" width="32" height="32">
+            EcomGrowthIA
+          </a>
+          <p class="footer__tagline mt-16">Sistemas de captación, seguimiento y conversión para negocios que quieren crecer con más control.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Navegación</p>
+          <nav class="footer__links" aria-label="Pie de página">
+            <a href="index.html" class="footer__link">Inicio</a>
+            <a href="servicios.html" class="footer__link">Servicios</a>
+            <a href="sobre-nosotros.html" class="footer__link">Sobre nosotros</a>
+            <a href="contacto.html" class="footer__link">Contacto</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__col-title">Servicios</p>
+          <nav class="footer__links" aria-label="Servicios">
+            <a href="servicios.html#marketing" class="footer__link">Marketing digital</a>
+            <a href="servicios.html#automatizacion" class="footer__link">Automatización con IA</a>
+            <a href="servicios.html#webs" class="footer__link">Páginas web</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__links">
+            <a href="tel:+34685480503" class="footer__link">+34 685 480 503</a>
+            <a href="mailto:info@ecomgrowthia.com" class="footer__link">info@ecomgrowthia.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2024 EcomGrowthIA. Todos los derechos reservados.</span>
+        <span>Sistemas de ventas predecibles para negocios en crecimiento</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre nosotros — EcomGrowthIA | No somos una agencia más</title>
+  <meta name="description" content="EcomGrowthIA no es una agencia tradicional. Construimos sistemas que generan resultados: más ventas, más control y menos caos para tu negocio.">
+  <link rel="icon" href="wp-content/uploads/2026/05/cropped-logo_sin_fondo_recortado-32x32.png" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="../fonts.googleapis.com/css2/family%3DManrope_wght%40600%3B700%26family%3DSpace%2BGrotesk_wght%40500%3B600%3B700%26family%3DInter_wght%40400%3B500%3B600%26display%3Dswap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <style>
+    .belief-block {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 56px 0;
+      position: relative;
+    }
+    .belief-block::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--f-head);
+      font-size: 120px;
+      color: rgba(56,189,248,0.08);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .belief-text {
+      font-family: var(--f-head);
+      font-size: clamp(22px, 3.5vw, 32px);
+      font-weight: 500;
+      color: var(--c-text);
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+    .belief-text em { font-style: normal; color: var(--c-accent); }
+    .belief-sub {
+      font-size: 17px;
+      color: var(--c-text-muted);
+      line-height: 1.65;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .manifesto-block {
+      background: rgba(7,26,51,0.4);
+      border: 1px solid rgba(56,189,248,0.12);
+      border-radius: 20px;
+      padding: 48px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    @media (max-width: 600px) { .manifesto-block { padding: 28px 20px; } }
+    .manifesto-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(56,189,248,0.07);
+    }
+    .manifesto-item:last-child { border-bottom: none; }
+    .manifesto-num {
+      font-family: var(--f-head);
+      font-size: 22px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--c-accent) 0%, var(--c-btn) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 28px;
+    }
+    .manifesto-content {}
+    .manifesto-title {
+      font-family: var(--f-head);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--c-text);
+      margin-bottom: 4px;
+    }
+    .manifesto-desc {
+      font-size: 15px;
+      color: var(--c-text-muted);
+      line-height: 1.55;
+    }
+    .timeline-row {
+      display: grid;
+      grid-template-columns: 1fr 64px 1fr;
+      gap: 0;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .timeline-side {
+      padding: 28px 32px;
+    }
+    .timeline-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 28px;
+    }
+    .timeline-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--c-accent);
+      box-shadow: 0 0 16px rgba(56,189,248,0.6);
+      flex-shrink: 0;
+      margin-bottom: 8px;
+    }
+    .timeline-line {
+      width: 1px;
+      flex: 1;
+      background: linear-gradient(180deg, rgba(56,189,248,0.4) 0%, rgba(56,189,248,0.05) 100%);
+    }
+    @media (max-width: 700px) {
+      .timeline-row { grid-template-columns: 1fr; }
+      .timeline-center { display: none; }
+      .timeline-side { padding: 20px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="EcomGrowthIA — Inicio">
+        <img src="wp-content/uploads/2026/05/cropped-logo_sin_fondo_recortado-192x192.png" alt="Logo EcomGrowthIA" width="36" height="36">
+        EcomGrowthIA
+        <span class="navbar__logo-dot" aria-hidden="true"></span>
+      </a>
+      <div class="navbar__nav" role="menubar">
+        <a href="index.html" class="navbar__link" role="menuitem">Inicio</a>
+        <a href="servicios.html" class="navbar__link" role="menuitem">Servicios</a>
+        <a href="sobre-nosotros.html" class="navbar__link" role="menuitem">Sobre nosotros</a>
+        <a href="contacto.html" class="navbar__link" role="menuitem">Contacto</a>
+        <a href="contacto.html" class="navbar__cta">Hablar con nosotros</a>
+      </div>
+      <button class="navbar__hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="navbar__mobile" role="menu">
+    <a href="index.html" class="navbar__link">Inicio</a>
+    <a href="servicios.html" class="navbar__link">Servicios</a>
+    <a href="sobre-nosotros.html" class="navbar__link">Sobre nosotros</a>
+    <a href="contacto.html" class="navbar__link">Contacto</a>
+    <a href="contacto.html" class="navbar__cta">Hablar con nosotros</a>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="eyebrow anim anim-1">Sobre EcomGrowthIA</div>
+          <h1 class="h1 anim anim-2" id="hero-title">
+            No somos una agencia más.<br><em>Creamos sistemas para vender mejor.</em>
+          </h1>
+          <p class="hero__sub anim anim-3">
+            EcomGrowthIA nace para ayudar a negocios que quieren crecer sin depender del caos, la improvisación o el seguimiento manual de ventas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ===== CREENCIA ===== -->
+    <section class="section" aria-labelledby="belief-title">
+      <div class="container">
+        <div class="belief-block reveal">
+          <h2 class="belief-text" id="belief-title">
+            Creemos que muchos negocios no necesitan trabajar más.<br>
+            <em>Necesitan un sistema mejor.</em>
+          </h2>
+          <p class="belief-sub">
+            Cuando no hay seguimiento, control ni claridad, las oportunidades se pierden. Nuestro trabajo es convertir ese caos en un sistema simple, medible y orientado a ventas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ===== METODOLOGÍA — 4 PILARES ===== -->
+    <section class="section section--alt" aria-labelledby="methodology-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="h2 reveal" id="methodology-title">Nuestra metodología</h2>
+          <p class="section-sub reveal">
+            Todo lo que hacemos parte de cuatro pilares que se complementan para generar resultados predecibles.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar reveal">
+            <div class="pillar__num">01</div>
+            <div class="pillar__title">Claridad</div>
+            <p class="pillar__desc">Primero entendemos tu negocio, tu cliente y tu proceso de venta actual. Sin claridad no hay sistema.</p>
+          </div>
+          <div class="pillar reveal">
+            <div class="pillar__num">02</div>
+            <div class="pillar__title">Captación</div>
+            <p class="pillar__desc">Diseñamos estrategias para que las oportunidades lleguen de forma constante y sin depender del azar.</p>
+          </div>
+          <div class="pillar reveal">
+            <div class="pillar__num">03</div>
+            <div class="pillar__title">Automatización</div>
+            <p class="pillar__desc">Implementamos procesos automáticos para que ningún lead se enfríe y el seguimiento ocurra siempre.</p>
+          </div>
+          <div class="pillar reveal">
+            <div class="pillar__num">04</div>
+            <div class="pillar__title">Conversión</div>
+            <p class="pillar__desc">Optimizamos cada punto del proceso para que más oportunidades se conviertan en ventas reales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ===== NO HACEMOS / SÍ HACEMOS ===== -->
+    <section class="section" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="h2 reveal" id="approach-title">Nuestra forma de trabajar</h2>
+          <p class="section-sub reveal">Diferenciarse también es saber qué no hacer.</p>
+        </div>
+
+        <div class="obj-grid reveal">
+          <div class="obj-col obj-col--no">
+            <h3 class="obj-title">Lo que NO hacemos</h3>
+            <ul class="obj-list">
+              <li>Contenido por hacer sin estrategia detrás</li>
+              <li>Promesas vacías y humo</li>
+              <li>Procesos complicados que nadie entiende</li>
+              <li>Herramientas innecesarias que nunca usas</li>
+              <li>Estrategias copiadas que no encajan</li>
+              <li>Entregables que no generan ventas</li>
+            </ul>
+          </div>
+          <div class="obj-col obj-col--yes">
+            <h3 class="obj-title">Lo que SÍ hacemos</h3>
+            <ul class="obj-list">
+              <li>Creamos sistemas simples y medibles</li>
+              <li>Ayudamos a captar mejores oportunidades</li>
+              <li>Automatizamos el seguimiento comercial</li>
+              <li>Mejoramos la tasa de conversión de ventas</li>
+              <li>Damos más control sobre el proceso</li>
+              <li>Construimos para que escale sin ti</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ===== MANIFIESTO / VALORES ===== -->
+    <section class="section section--dark" aria-labelledby="values-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="h2 reveal" id="values-title">Por qué elegir EcomGrowthIA</h2>
+          <p class="section-sub reveal">
+            Combinamos estrategia, marketing, automatización e inteligencia artificial para que tu negocio venda mejor.
+          </p>
+        </div>
+
+        <div class="manifesto-block reveal">
+          <div class="manifesto-item">
+            <span class="manifesto-num" aria-hidden="true">01</span>
+            <div class="manifesto-content">
+              <p class="manifesto-title">No somos una agencia tradicional</p>
+              <p class="manifesto-desc">No hacemos tareas sueltas. Construimos sistemas completos que generan resultados medibles.</p>
+            </div>
+          </div>
+          <div class="manifesto-item">
+            <span class="manifesto-num" aria-hidden="true">02</span>
+            <div class="manifesto-content">
+              <p class="manifesto-title">Nos centramos en el resultado económico</p>
+              <p class="manifesto-desc">Cada acción que implementamos tiene como objetivo generar más ventas o reducir oportunidades perdidas.</p>
+            </div>
+          </div>
+          <div class="manifesto-item">
+            <span class="manifesto-num" aria-hidden="true">03</span>
+            <div class="manifesto-content">
+              <p class="manifesto-title">Eliminamos el caos comercial</p>
+              <p class="manifesto-desc">Convertimos procesos caóticos y manuales en sistemas simples, automáticos y escalables.</p>
+            </div>
+          </div>
+          <div class="manifesto-item">
+            <span class="manifesto-num" aria-hidden="true">04</span>
+            <div class="manifesto-content">
+              <p class="manifesto-title">Combinamos lo mejor de tres mundos</p>
+              <p class="manifesto-desc">Estrategia de marketing, automatización con IA y diseño web orientado a conversión. Todo alineado hacia un solo objetivo: crecer.</p>
+            </div>
+          </div>
+          <div class="manifesto-item">
+            <span class="manifesto-num" aria-hidden="true">05</span>
+            <div class="manifesto-content">
+              <p class="manifesto-title">Construimos para que escale sin ti</p>
+              <p class="manifesto-desc">El objetivo no es que dependa de nosotros para siempre. Es que tu negocio tenga un sistema que funcione de forma autónoma.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="section cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-section__inner">
+          <div class="eyebrow reveal">El siguiente paso</div>
+          <h2 class="h2 reveal" id="cta-title">
+            Más ventas. Más control. Menos caos.
+          </h2>
+          <p class="cta-section__sub reveal">
+            Si quieres saber cómo podríamos ayudar a tu negocio, cuéntanos tu situación y lo valoramos juntos.
+          </p>
+          <div class="btn-group reveal">
+            <a href="contacto.html" class="btn btn--primary btn--lg">
+              Contactar
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="servicios.html" class="btn btn--ghost btn--lg">Ver servicios</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="navbar__logo">
+            <img src="wp-content/uploads/2026/05/cropped-logo_sin_fondo_recortado-192x192.png" alt="Logo EcomGrowthIA" width="32" height="32">
+            EcomGrowthIA
+          </a>
+          <p class="footer__tagline mt-16">Sistemas de captación, seguimiento y conversión para negocios que quieren crecer con más control.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Navegación</p>
+          <nav class="footer__links" aria-label="Pie de página">
+            <a href="index.html" class="footer__link">Inicio</a>
+            <a href="servicios.html" class="footer__link">Servicios</a>
+            <a href="sobre-nosotros.html" class="footer__link">Sobre nosotros</a>
+            <a href="contacto.html" class="footer__link">Contacto</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__col-title">Servicios</p>
+          <nav class="footer__links" aria-label="Servicios">
+            <a href="servicios.html#marketing" class="footer__link">Marketing digital</a>
+            <a href="servicios.html#automatizacion" class="footer__link">Automatización con IA</a>
+            <a href="servicios.html#webs" class="footer__link">Páginas web</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__links">
+            <a href="tel:+34685480503" class="footer__link">+34 685 480 503</a>
+            <a href="mailto:info@ecomgrowthia.com" class="footer__link">info@ecomgrowthia.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2024 EcomGrowthIA. Todos los derechos reservados.</span>
+        <span>Sistemas de ventas predecibles para negocios en crecimiento</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
