@@ -2095,16 +2095,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   document.getElementById('aima-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('button[type="submit"]');
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '✓ ¡Solicitud enviada!';
+    btn.innerHTML = '✓ ¡Redirigiendo...';
     btn.style.background = '#38BDF8';
     btn.style.color = '#050B14';
+    btn.disabled = true;
     setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.style.background = '';
-      btn.style.color = '';
-      this.reset();
-    }, 3000);
+      window.location.href = 'agendar.html';
+    }, 800);
   });
 </script>
 
