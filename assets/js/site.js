@@ -269,6 +269,8 @@ function validateForm(form) {
 })();
 
 /* === CONTACT FORM HANDLER === */
+// Envía al workflow de n8n "[EcomGrowthIA] Formulario web → CRM" (guarda en Airtable y avisa a info@)
+const CONTACT_WEBHOOK_URL = 'https://n8n.89.167.88.67.sslip.io/webhook/ecomgrowthia-formulario-web';
 (function () {
   const form = document.getElementById('contact-form');
   if (!form) return;
@@ -282,17 +284,39 @@ function validateForm(form) {
     }
 
     const btn = form.querySelector('button[type="submit"]');
+    const errorBox = document.getElementById('contact-form-error');
+    const btnOriginal = btn.innerHTML;
     btn.disabled = true;
     btn.textContent = 'Enviando…';
+    if (errorBox) { errorBox.hidden = true; errorBox.style.display = 'none'; }
 
-    setTimeout(() => {
-      form.innerHTML = `
+    const datos = Object.fromEntries(new FormData(form).entries());
+    datos.origen = 'contacto';
+
+    fetch(CONTACT_WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(datos),
+    })
+      .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); })
+      .then(() => {
+        form.innerHTML = `
         <div style="text-align:center; padding:40px 0;">
           <div style="font-size:48px; margin-bottom:16px;">✓</div>
           <h3 style="font-family:var(--f-head);font-size:22px;margin-bottom:12px;color:var(--c-text)">Mensaje enviado</h3>
           <p style="color:var(--c-text-muted)">Te responderemos en menos de 24h. Mientras tanto, puedes llamarnos al <a href="tel:+34685480503" style="color:var(--c-accent)">+34 685 480 503</a>.</p>
         </div>`;
-    }, 1200);
+      })
+      .catch(() => {
+        // Nunca fingir que se ha enviado: si falla, decirlo y dar alternativas
+        btn.disabled = false;
+        btn.innerHTML = btnOriginal;
+        if (errorBox) {
+          errorBox.innerHTML = 'No hemos podido enviar tu mensaje. Escríbenos a <a href="mailto:info@ecomgrowthia.com">info@ecomgrowthia.com</a> o llámanos al <a href="tel:+34685480503">+34 685 480 503</a>.';
+          errorBox.hidden = false;
+          errorBox.style.display = 'block';
+        }
+      });
   });
 })();
 

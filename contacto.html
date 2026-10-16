@@ -161,6 +161,12 @@
                 <span class="field-error" role="alert"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Este campo es obligatorio</span>
               </div>
 
+              <!-- Campo trampa: invisible para personas; si llega relleno, es un bot -->
+              <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">
+                <label for="website">No rellenes este campo</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+              <p id="contact-form-error" class="field-error" role="alert" hidden style="display:none;margin:8px 0 0;"></p>
               <button type="submit" class="btn btn--primary btn--full btn--lg" style="margin-top:8px;">
                 Enviar mensaje
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
