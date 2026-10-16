@@ -13,6 +13,7 @@ RewriteBase /
 #    .well-known queda permitido: lo usa la emisión del certificado SSL.
 RewriteRule (^|/)\.(?!well-known/) - [F,L]
 RewriteRule ^(vercel\.json|README\.md)$ - [F,L]
+RewriteRule ^_plantillas/ - [F,L]
 
 # 1. ecomgrowthia.com → www.ecomgrowthia.com (la versión canónica de siempre)
 RewriteCond %{HTTP_HOST} ^ecomgrowthia\.com$ [NC]
